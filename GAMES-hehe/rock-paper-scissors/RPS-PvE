@@ -1,4 +1,4 @@
-#rock paper scissors dude :)
+#rock paper scissors :)
 w,l,d=0,0,0
 x=input("enter your name: ")
 for i in range(3):
