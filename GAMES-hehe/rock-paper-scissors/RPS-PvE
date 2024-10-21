@@ -1,0 +1,66 @@
+#rock paper scissors dude :)
+w,l,d=0,0,0
+x=input("enter your name: ")
+for i in range(3):
+    s=int(input("\nchoose:\n1 for rock\n2 for paper\n3 for scissors\nyou choose: "))
+    import random
+    a=random.randint(1,3)
+    if s==1:
+        if(a==1):
+            print("you chose rock 🥊")
+            print("the computer chooses: rock 🥊")
+            print("draw")
+            d+=1
+        elif(a==2):
+            print("you chose rock 🥊")
+            print("the computer chooses: paper 🧻")
+            print("you lost")
+            l+=1
+        elif(a==3):
+            print("you chose rock 🥊")
+            print("the computer chooses: scissor ✂")
+            print("you won")
+            w+=1
+
+    if s==2:
+        if(a==1):
+            print("you chose paper 🧻")
+            print("the computer chooses: rock 🥊")
+            print("you won")
+            w+=1
+        elif(a==2):
+            print("you chose paper 🧻")
+            print("the computer chooses: paper 🧻")
+            print("draw")
+            d+=1
+        elif(a==3):
+            print("you chose paper 🧻")
+            print("the computer chooses: scissor ✂")
+            print("you lost")
+            l+=1
+
+    if s==3:
+        if(a==1):
+            print("you chose scissor ✂")
+            print("the computer chooses: rock 🥊")
+            print("you lost")
+            l+=1
+        elif(a==2):
+            print("you chose scissor ✂")
+            print("the computer chooses: paper 🧻")
+            print("you won")
+            w+=1
+        elif(a==3):
+            print("you chose scissor ✂")
+            print("the computer chooses: scissor ✂")
+            print("draw")
+            d+=1
+            
+print("\nyou won ", w, " times\nyou lost ", l, " times")
+
+if(w>l):
+    print("YOU WON! 🥳")
+elif(w<l):
+    print("YOU LOST! 😣")
+else:
+    print("DRAW! 😗")
