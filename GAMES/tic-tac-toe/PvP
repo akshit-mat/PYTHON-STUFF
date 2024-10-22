@@ -1,0 +1,263 @@
+#### TIC-TAC-TOE AKSHIT (1v1)
+print("TIC TAC TOE\npositions are: ")
+a,b,c,d,e,f,g,h,i=1,2,3,4,5,6,7,8,9
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+import sys
+
+A=int(input("player1 enter position: "))
+if(A==1):
+    a="x"
+    b,c,d,e,f,g,h,i=" "," "," "," "," "," "," "," "
+elif(A==2):
+    b="x"
+    a,c,d,e,f,g,h,i=" "," "," "," "," "," "," "," "
+elif(A==3):
+    c="x"
+    a,b,d,e,f,g,h,i=" "," "," "," "," "," "," "," "
+elif(A==4):
+    d="x"
+    a,b,c,e,f,g,h,i=" "," "," "," "," "," "," "," "
+elif(A==5):
+    e="x"
+    a,b,c,d,f,g,h,i=" "," "," "," "," "," "," "," "
+elif(A==6):
+    f="x"
+    a,b,c,d,e,g,h,i=" "," "," "," "," "," "," "," "
+elif(A==7):
+    g="x"
+    a,b,c,d,e,f,h,i=" "," "," "," "," "," "," "," "
+elif(A==8):
+    h="x"
+    a,b,c,d,e,f,g,i=" "," "," "," "," "," "," "," "
+elif(A==9):
+    i="x"
+    a,b,c,d,e,f,g,h=" "," "," "," "," "," "," "," "
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+B=int(input("player2 enter position: "))
+if(B==A):
+    print("ERROR")
+    sys.exit()
+elif(B==1):
+    a="O"
+elif(B==2):
+    b="O"
+elif(B==3):
+    c="O"
+elif(B==4):
+    d="O"
+elif(B==5):
+    e="O"
+elif(B==6):
+    f="O"
+elif(B==7):
+    g="O"
+elif(B==8):
+    h="O"
+elif(B==9):
+    i="O"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("woohooo!! player2 won!! 🎉")
+    sys.exit() 
+    
+C=int(input("player1 enter position: "))
+if(C==A or C==B):
+    print("ERROR")
+    sys.exit()
+elif(C==1):
+    a="x"
+elif(C==2):
+    b="x"
+elif(C==3):
+    c="x"
+elif(C==4):
+    d="x"
+elif(C==5):
+    e="x"
+elif(C==6):
+    f="x"
+elif(C==7):
+    g="x"
+elif(C==8):
+    h="x"
+elif(C==9):
+    i="x"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("woohooo!! player1 won!! 🎉")
+    sys.exit() 
+
+D=int(input("player2 enter position: "))
+if(D==A or D==B or D==C):
+    print("ERROR")
+    sys.exit()
+elif(D==1):
+    a="O"
+elif(D==2):
+    b="O"
+elif(D==3):
+    c="O"
+elif(D==4):
+    d="O"
+elif(D==5):
+    e="O"
+elif(D==6):
+    f="O"
+elif(D==7):
+    g="O"
+elif(D==8):
+    h="O"
+elif(D==9):
+    i="O"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("woohooo!! player2 won!! 🎉")
+    sys.exit() 
+
+E=int(input("player1 enter position: "))
+if(E==A or E==B or E==C or E==D):
+    print("ERROR")
+    sys.exit()
+elif(E==1):
+    a="x"
+elif(E==2):
+    b="x"
+elif(E==3):
+    c="x"
+elif(E==4):
+    d="x"
+elif(E==5):
+    e="x"
+elif(E==6):
+    f="x"
+elif(E==7):
+    g="x"
+elif(E==8):
+    h="x"
+elif(E==9):
+    i="x"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("woohooo!! player1 won!! 🎉")
+    sys.exit() 
+
+F=int(input("player2 enter position: "))
+if(F==A or F==B or F==C or F==D or F==E):
+    print("ERROR")
+    sys.exit()
+elif(F==1):
+    a="O"
+elif(F==2):
+    b="O"
+elif(F==3):
+    c="O"
+elif(F==4):
+    d="O"
+elif(F==5):
+    e="O"
+elif(F==6):
+    f="O"
+elif(F==7):
+    g="O"
+elif(F==8):
+    h="O"
+elif(F==9):
+    i="O"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("woohooo!! player2 won!! 🎉")
+    sys.exit() 
+
+G=int(input("player1 enter position: "))
+if(G==A or G==B or G==C or G==D or G==E or G==F):
+    print("ERROR")
+    sys.exit()
+elif(G==1):
+    a="x"
+elif(G==2):
+    b="x"
+elif(G==3):
+    c="x"
+elif(G==4):
+    d="x"
+elif(G==5):
+    e="x"
+elif(G==6):
+    f="x"
+elif(G==7):
+    g="x"
+elif(G==8):
+    h="x"
+elif(G==9):
+    i="x"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("woohooo!! player1 won!! 🎉")
+    sys.exit() 
+
+H=int(input("player2 enter position: "))
+if(H==A or H==B or H==C or H==D or H==E or H==F or H==G):
+    print("ERROR")
+    sys.exit()
+elif(H==1):
+    a="O"
+elif(H==2):
+    b="O"
+elif(H==3):
+    c="O"
+elif(H==4):
+    d="O"
+elif(H==5):
+    e="O"
+elif(H==6):
+    f="O"
+elif(H==7):
+    g="O"
+elif(H==8):
+    h="O"
+elif(H==9):
+    i="O"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("woohooo!! player2 won!! 🎉")
+    sys.exit() 
+
+I=int(input("player1 enter position: "))
+if(I==A or I==B or I==C or I==D or I==E or I==F or I==G or I==H):
+    print("ERROR")
+    sys.exit()
+elif(I==1):
+    a="x"
+elif(I==2):
+    b="x"
+elif(I==3):
+    c="x"
+elif(I==4):
+    d="x"
+elif(I==5):
+    e="x"
+elif(I==6):
+    f="x"
+elif(I==7):
+    g="x"
+elif(I==8):
+    h="x"
+elif(I==9):
+    i="x"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("woohooo!! player1 won!! 🎉")
+    sys.exit() 
+
+else:
+    print("that's a draw 😭")
