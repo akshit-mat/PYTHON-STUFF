@@ -1,0 +1,154 @@
+### rock paper scissors but with a scoreboard using a database from MYSQL
+
+print("THIS IS ROCK PAPER SCISSORS 😁")
+def game():
+    w,l,d=0,0,0
+    print("WELCOME TO THE GAME:\n")
+    name=str(input("enter your name: "))
+    s=int(input("\nchoose:\n1 for rock\n2 for paper\n3 for scissors\nyou choose: "))
+    import random
+    a=random.randint(1,3)
+    if s==1:
+        if(a==1):
+            print("you chose rock 🥊")
+            print("the computer chooses: rock 🥊")
+            print("DRAW")
+            d+=1
+        elif(a==2):
+            print("you chose rock 🥊")
+            print("the computer chooses: paper 🧻")
+            print("YOU LOST!")
+            l+=1
+        elif(a==3):
+            print("you chose rock 🥊")
+            print("the computer chooses: scissor ✂")
+            print("YOU WON!!")
+            w+=1
+ 
+    if s==2:
+        if(a==1):
+            print("you chose paper 🧻")
+            print("the computer chooses: rock 🥊")
+            print("YOU WON!!")
+            w+=1
+        elif(a==2):
+            print("you chose paper 🧻")
+            print("the computer chooses: paper 🧻")
+            print("DRAW")
+            d+=1
+        elif(a==3):
+            print("you chose paper 🧻")
+            print("the computer chooses: scissor ✂")
+            print("YOU LOST!")
+            l+=1
+ 
+    if s==3:
+        if(a==1):
+            print("you chose scissor ✂")
+            print("the computer chooses: rock 🥊")
+            print("YOU LOST!")
+            l+=1
+        elif(a==2):
+            print("you chose scissor ✂")
+            print("the computer chooses: paper 🧻")
+            print("YOU WON!!")
+            w+=1
+        elif(a==3):
+            print("you chose scissor ✂")
+            print("the computer chooses: scissor ✂")
+            print("DRAW")
+            d+=1
+ 
+    import pymysql
+    conn=pymysql.connect(host="localhost",
+                        user='root',
+                        password="123",
+                        db="rps_scoreboard")
+    cur=conn.cursor()
+    conn.commit()
+    n=0
+    abc="select total from score where name='{}';".format(name)
+    try:
+        cur.execute(abc)
+        tata=cur.fetchone()
+        for i in tata:
+            n=i
+    except:
+        n=0
+    n+=1
+    if w!=0:
+        boom='w'
+    elif l!=0:
+        boom='l'
+    elif d!=0:
+        boom='d'
+ 
+    s="select exists(select * from score where name='{}');".format(name)
+    cur.execute(s)
+    so=cur.fetchone()
+    for i in so:
+        ak=i
+ 
+    x="insert into score values('{}',{},{},{},{});".format(name,w,l,d,n)
+    y="update score set total={},{}={} + 1 where name='{}';".format(n,boom,boom,name)
+    conn.commit()
+    if ak==1:
+        cur.execute(y)
+        conn.commit()
+    elif ak==0:
+        cur.execute(x)
+        conn.commit()
+        
+        
+def score():
+    import pymysql
+    conn=pymysql.connect(host="localhost",
+                        user='root',
+                        password="123",
+                        db="rps_scoreboard")
+    cur=conn.cursor()
+    tehe="select name from score;"
+    cur.execute(tehe)
+    x=cur.fetchall()
+    v=5
+    for i in x:
+        if v<len(i[0]):
+            v=len(i[0])
+    k=v
+ 
+    print(("+"+"-"*k)*5+"+")
+    a="describe score;"
+    cur.execute(a)
+    x=cur.fetchall()
+    print('|',end="")
+    for i in range(len(x)):
+        print(str(x[i][0]).ljust(k, " ") , end="|")
+ 
+ 
+    print()
+    print(("+"+"-"*k)*5+"+")
+    w="select * from score;"
+    cur.execute(w)
+    x=cur.fetchall()
+    for i in range(len(x)):
+        print("|",end="")
+        for j in range(len(x[i])):
+            print(str(x[i][j]).ljust(k," ") , end="|")
+        print()
+    print(("+"+"-"*k)*5+"+")
+    cur.close()
+    conn.close()
+
+while True:
+    print("\n\n\ntype 1 for game 🎮\ntype 2 for scoreboard\ntype 3 for exit")
+    y=int(input("what do you want to choose: "))
+    print('\n\n')
+    if y==1:
+        game()
+        print("\n############################################################################")
+    elif y==2:
+        score()
+        print("\n############################################################################")
+    else:
+        break
+print("\nThanks for playing 😇")
