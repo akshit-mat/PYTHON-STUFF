@@ -1,0 +1,268 @@
+#TIC TAC TOE AKSHIT (player vs computer) using RANDOM
+
+print("TIC TAC TOE\npositions are: ")
+a,b,c,d,e,f,g,h,i=1,2,3,4,5,6,7,8,9
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+import sys
+
+A=int(input("player1 enter position: "))
+if(A==1):
+    a="x"
+    b,c,d,e,f,g,h,i=" "," "," "," "," "," "," "," "
+elif(A==2):
+    b="x"
+    a,c,d,e,f,g,h,i=" "," "," "," "," "," "," "," "
+elif(A==3):
+    c="x"
+    a,b,d,e,f,g,h,i=" "," "," "," "," "," "," "," "
+elif(A==4):
+    d="x"
+    a,b,c,e,f,g,h,i=" "," "," "," "," "," "," "," "
+elif(A==5):
+    e="x"
+    a,b,c,d,f,g,h,i=" "," "," "," "," "," "," "," "
+elif(A==6):
+    f="x"
+    a,b,c,d,e,g,h,i=" "," "," "," "," "," "," "," "
+elif(A==7):
+    g="x"
+    a,b,c,d,e,f,h,i=" "," "," "," "," "," "," "," "
+elif(A==8):
+    h="x"
+    a,b,c,d,e,f,g,i=" "," "," "," "," "," "," "," "
+elif(A==9):
+    i="x"
+    a,b,c,d,e,f,g,h=" "," "," "," "," "," "," "," "
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+print("computer plays: ")
+import random
+B=5
+while B==A:
+    B=random.randint(1,9)
+if(B==1):
+    a="o"
+elif(B==2):
+    b="o"
+elif(B==3):
+    c="o"
+elif(B==4):
+    d="o"
+elif(B==5):
+    e="o"
+elif(B==6):
+    f="o"
+elif(B==7):
+    g="o"
+elif(B==8):
+    h="o"
+elif(B==9):
+    i="o"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("you lost 🙂")
+    sys.exit()
+
+C=int(input("player1 enter position: "))
+if(C==A or C==B):
+    print("ERROR")
+    sys.exit()
+elif(C==1):
+    a="x"
+elif(C==2):
+    b="x"
+elif(C==3):
+    c="x"
+elif(C==4):
+    d="x"
+elif(C==5):
+    e="x"
+elif(C==6):
+    f="x"
+elif(C==7):
+    g="x"
+elif(C==8):
+    h="x"
+elif(C==9):
+    i="x"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("woohooo!! you won!! 🎉")
+    sys.exit()
+
+print("computer plays: ")
+import random
+D=random.randint(1,9)
+while D==A or D==B or D==C:
+    D=random.randint(1,9)
+if(D==1):
+    a="o"
+elif(D==2):
+    b="o"
+elif(D==3):
+    c="o"
+elif(D==4):
+    d="o"
+elif(D==5):
+    e="o"
+elif(D==6):
+    f="o"
+elif(D==7):
+    g="o"
+elif(D==8):
+    h="o"
+elif(D==9):
+    i="o"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("you lost 🙂")
+    sys.exit()
+
+E=int(input("player1 enter position: "))
+if(E==A or E==B or E==C or E==D):
+    print("ERROR")
+    sys.exit()
+elif(E==1):
+    a="x"
+elif(E==2):
+    b="x"
+elif(E==3):
+    c="x"
+elif(E==4):
+    d="x"
+elif(E==5):
+    e="x"
+elif(E==6):
+    f="x"
+elif(E==7):
+    g="x"
+elif(E==8):
+    h="x"
+elif(E==9):
+    i="x"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("woohooo!! you won!! 🎉")
+    sys.exit() 
+
+print("computer plays: ")
+import random
+F=random.randint(1,9)
+while F==A or F==B or F==C or F==D or F==E:
+    F=random.randint(1,9)
+if(F==1):
+    a="o"
+elif(F==2):
+    b="o"
+elif(F==3):
+    c="o"
+elif(F==4):
+    d="o"
+elif(F==5):
+    e="o"
+elif(F==6):
+    f="o"
+elif(F==7):
+    g="o"
+elif(F==8):
+    h="o"
+elif(F==9):
+    i="o"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("you lost 🙂")
+    sys.exit()
+
+G=int(input("player1 enter position: "))
+if(G==A or G==B or G==C or G==D or G==E or G==F):
+    print("ERROR")
+    sys.exit()
+elif(G==1):
+    a="x"
+elif(G==2):
+    b="x"
+elif(G==3):
+    c="x"
+elif(G==4):
+    d="x"
+elif(G==5):
+    e="x"
+elif(G==6):
+    f="x"
+elif(G==7):
+    g="x"
+elif(G==8):
+    h="x"
+elif(G==9):
+    i="x"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("woohooo!! you won!! 🎉")
+    sys.exit()
+    
+print("computer plays: ")
+import random
+H=random.randint(1,9)
+while H==A or H==B or H==C or H==D or H==E or H==F or H==G:
+    F=random.randint(1,9)
+if(H==1):
+    a="o"
+elif(H==2):
+    b="o"
+elif(H==3):
+    c="o"
+elif(H==4):
+    d="o"
+elif(H==5):
+    e="o"
+elif(H==6):
+    f="o"
+elif(H==7):
+    g="o"
+elif(H==8):
+    h="o"
+elif(H==9):
+    i="o"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("you lost 🙂")
+    sys.exit()
+    
+I=int(input("player1 enter position: "))
+if(I==A or I==B or I==C or I==D or I==E or I==F or I==G or I==H):
+    print("ERROR")
+    sys.exit()
+elif(I==1):
+    a="x"
+elif(I==2):
+    b="x"
+elif(I==3):
+    c="x"
+elif(I==4):
+    d="x"
+elif(I==5):
+    e="x"
+elif(I==6):
+    f="x"
+elif(I==7):
+    g="x"
+elif(I==8):
+    h="x"
+elif(I==9):
+    i="x"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("woohooo!! you won!! 🎉")
+    sys.exit()
+
+else:
+    print("that's a draw 😭")
