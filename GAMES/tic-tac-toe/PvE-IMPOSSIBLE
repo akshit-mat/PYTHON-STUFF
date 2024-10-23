@@ -1,0 +1,277 @@
+##### THE ULTIMATE IMPOSSIBLE TIC-TAC-TOE -by AKSHIT
+
+print("TIC TAC TOE\npositions are: ")
+a,b,c,d,e,f,g,h,i=1,2,3,4,5,6,7,8,9
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+import sys
+
+#first turn --------------------------------------------------------------------------------------------------------------------
+
+print("computer plays: ")
+c_turn1=3
+c="o"
+
+a,b,d,e,f,g,h,i=" "," "," "," "," "," "," "," "
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+#second turn -------------------------------------------------------------------------------------------------------------------
+
+p_turn2=int(input("player1 enter position: "))
+if(p_turn2==3):
+    print("ERROR")
+    sys.exit()
+elif(p_turn2==1):
+    a="x"
+elif(p_turn2==2):
+    b="x"
+elif(p_turn2==4):
+    d="x"    
+elif(p_turn2==5):
+    e="x"
+elif(p_turn2==6):
+    f="x"
+elif(p_turn2==7):
+    g="x"
+elif(p_turn2==8):
+    h="x"
+elif(p_turn2==9):
+    i="x"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("woohooo!! you won!! 🎉")
+    sys.exit()
+
+#third turn --------------------------------------------------------------------------------------------------------------------    
+    
+print("computer plays: ")
+if(p_turn2==1 or p_turn2==2 or p_turn2==8 ):
+    i="o"
+    c_turn3=9
+elif(p_turn2==4 or p_turn2==6 or p_turn2==7 or p_turn2==9):
+    a="o"
+    c_turn3=1
+
+elif(p_turn2==5):
+    g="o"
+    c_turn3=7
+    
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("\nyou lost 🙂")
+    sys.exit()
+
+#fourth turn --------------------------------------------------------------------------------------------------------------------
+    
+p_turn4=int(input("player1 enter position: "))
+if(p_turn4==c_turn3 or p_turn4==p_turn2 or p_turn4==c_turn1):
+    print("error")
+    sys.exit()
+elif(p_turn4==1):
+    a="x"
+elif(p_turn4==2):
+    b="x"
+elif(p_turn4==4):
+    d="x"    
+elif(p_turn4==5):
+    e="x"
+elif(p_turn4==6):
+    f="x"
+elif(p_turn4==7):
+    g="x"
+elif(p_turn4==8):
+    h="x"
+elif(p_turn4==9):
+    i="x"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("woohooo!! you won!! 🎉")
+    sys.exit()
+
+#fifth turn --------------------------------------------------------------------------------------------------------------------    
+
+print("computer plays: ")
+if(c_turn3==9 and p_turn4!=6):
+    c_turn5=6
+    f="o"
+elif(c_turn3==9 and p_turn4==6 and p_turn2==8):
+    c_turn5=1
+    a="o"
+elif(c_turn3==9 and p_turn4==6 and p_turn2!=8):
+    c_turn5=7
+    g="o"
+elif(c_turn3==1 and p_turn4!=2):
+    c_turn5=2
+    b="o"
+elif(c_turn3==1 and p_turn4==2 and (p_turn2==4 or p_turn2==7)):
+    c_turn5=9
+    i="o"
+elif(c_turn3==1 and p_turn4==2 and (p_turn2==6 or p_turn2==9)):
+    c_turn5=7
+    g="o"
+elif(c_turn3==7 and p_turn4==1):
+    c_turn5=9
+    i="o"
+elif(c_turn3==7 and p_turn4==9):
+    c_turn5=1
+    a="o"
+
+    
+elif(b==e=="x" and h==" "):
+    h="o"
+    c_turn5=8
+elif(d==e=="x" and f==" "):
+    f="o"
+    c_turn5=6
+elif(h==e=="x" and b==" "):
+    b="o"
+    c_turn5=2
+elif(f==e=="x" and d==" "):
+    d="o"
+    c_turn5=4
+
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("\nyou lost 🙂")
+    sys.exit()
+    
+#sixth turn --------------------------------------------------------------------------------------------------------------------    
+
+p_turn6=int(input("player1 enter position: "))
+if(p_turn6==c_turn5 or p_turn6==p_turn4 or p_turn6==c_turn3 or p_turn6==p_turn2 or p_turn6==c_turn1):
+    print("error")
+    sys.exit()
+elif(p_turn6==1):
+    a="x"
+elif(p_turn6==2):
+    b="x"
+elif(p_turn6==4):
+    d="x"    
+elif(p_turn6==5):
+    e="x"
+elif(p_turn6==6):
+    f="x"
+elif(p_turn6==7):
+    g="x"
+elif(p_turn6==8):
+    h="x"
+elif(p_turn6==9):
+    i="x"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("woohooo!! you won!! 🎉")
+    sys.exit()
+
+#seventh turn --------------------------------------------------------------------------------------------------------------------    
+
+print("computer plays: ")
+if(a==c=="o" and b==" "):
+    b="o"
+    c_turn7=2
+elif(d==f=="o" and e==" "):
+    e="o"
+    c_turn7=5
+elif(g==i=="o" and h==" "):
+    h="o"
+    c_turn7=8
+elif(a==g=="o" and d==" "):
+    d="o"
+    c_turn7=4
+elif(b==h=="o" and e==" "):
+    e="o"
+    c_turn7=5
+elif(c==i=="o" and f==" "):
+    f="o"
+    c_turn7=6
+elif(c==g=="o" and e==" "):
+    e="o"
+    c_turn7=5
+elif(a==i=="o" and e==" "):
+    e="o"
+    c_turn7=5
+
+     
+elif(g==h=="o" and i==" "):
+    i="o"
+    c_turn7=9
+elif(c==f=="o" and i==" "):
+    i="o"
+    c_turn7=9
+elif(b==c=="o" and a==" "):
+    a="o"
+    c_turn7=1
+elif(d==g=="o" and a==" "):
+    a="o"
+    c_turn7=1
+
+elif(e==i=="x" and a==" "):
+    a="o"
+    c_turn7=1
+elif(e==g=="x" and c==" "):
+    c="o"
+    c_turn7=3
+elif(e==a=="x" and i==" "):
+    i="o"
+    c_turn7=9
+elif(e==c=="x" and g==" "):
+    g="o"
+    c_turn7=7
+
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("\nyou lost 🙂")
+    sys.exit()
+    
+#eighth turn---------------------------------------------------------------------------------------------------------------------
+
+p_turn8=int(input("player1 enter position: "))
+if(p_turn8==c_turn7 or p_turn8==p_turn6 or p_turn8==c_turn5 or p_turn8==p_turn4 or p_turn8==c_turn3 or p_turn8==p_turn2 or p_turn8==c_turn1):
+    print("error")
+    sys.exit()
+elif(p_turn8==1):
+    a="x"
+elif(p_turn8==2):
+    b="x"
+elif(p_turn8==4):
+    d="x"    
+elif(p_turn8==5):
+    e="x"
+elif(p_turn8==6):
+    f="x"
+elif(p_turn8==7):
+    g="x"
+elif(p_turn8==8):
+    h="x"
+elif(p_turn8==9):
+    i="x"
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("woohooo!! you won!! 🎉")
+    sys.exit()
+
+#nineth turn---------------------------------------------------------------------------------------------------------------------
+
+print("computer plays: ")
+if(b==" "):
+    b="o"
+elif(d==" "):
+    d="o"
+elif(f==" "):
+    f="o"
+elif(h==" "):
+    h="o"
+
+print("\n",a,"|",b,"|",c,"\n-----------\n",d,"|",e,"|",f,"\n-----------\n",g,"|",h,"|",i)
+
+if(a==b==c!=" " or d==e==f!=" " or g==h==i!=" " or a==d==g!=" " or b==e==h!=" " or c==f==i!=" " or a==e==i!=" " or c==e==g!=" "):
+    print("\nyou lost 🙂")
+    sys.exit()
+else:
+    print("that's a draw 😭")
