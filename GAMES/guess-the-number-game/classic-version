@@ -1,0 +1,21 @@
+#guess the number game
+print("game rules: \nthere is a random number chosen by the computer between 1 and 10\nand you have to guess that number")
+import random
+while True:
+    y=random.randint(1,10)
+    c=0
+    while True:
+        a=int(input("your guess... "))
+        c+=1
+        if a>y:
+            print("number is smaller than that ⬇")
+        elif a<y:
+            print("number is greater than that ⬆")
+        elif a==y:
+            print("woah! that was the correct number 🤩")
+            print("you guessed the correct number in ",c," tries\n")
+            break
+    w=int(input("do you wanna play again? (0/1) "))
+    if w==0:
+        print("\nthanks for playing!")
+        break
