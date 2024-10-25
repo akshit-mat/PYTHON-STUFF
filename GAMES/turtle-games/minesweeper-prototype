@@ -1,0 +1,268 @@
+print("This is a minesweeper type of game...\nin this you gotta click on a tile and find the blue tile")
+from turtle import *
+import turtle
+getscreen()
+
+hideturtle()
+speed(0)
+penup()
+left(90)
+forward(125)
+left(90)
+forward(125)
+pendown()
+for i in range(4):
+    left(90)
+    forward(250)
+left(90)
+forward(250)
+left(90)
+for i in range(4):
+    forward(50)
+    left(90)
+    forward(250)
+    backward(250)
+    right(90)
+    
+forward(50)
+left(90)
+for i in range(4):
+    forward(50)
+    left(90)
+    forward(250)
+    backward(250)
+    right(90)
+    
+penup()
+goto(0,0)
+right(90)
+
+import random
+a=random.randint(1,25)
+
+a1_1,a1_2,a1_3,a1_4,a1_5,a2_1,a2_2,a2_3,a2_4,a2_5,a3_1,a3_2,a3_3,a3_4,a3_5,a4_1,a4_2,a4_3,a4_4,a4_5,a5_1,a5_2,a5_3,a5_4,a5_5="red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red","red"
+
+if a==1:
+    a1_1="blue"
+elif a==2:
+    a1_2="blue"
+elif a==3:
+    a1_3="blue"
+elif a==4:
+    a1_4="blue"
+elif a==5:
+    a1_5="blue"
+elif a==6:
+    a2_1="blue"
+elif a==7:
+    a2_2="blue"
+elif a==8:
+    a2_3="blue"
+elif a==9:
+    a2_4="blue"
+elif a==10:
+    a2_5="blue"
+elif a==11:
+    a3_1="blue"
+elif a==12:
+    a3_2="blue"
+elif a==13:
+    a3_3="blue"
+elif a==14:
+    a3_4="blue"
+elif a==15:
+    a3_5="blue"
+elif a==16:
+    a4_1="blue"
+elif a==17:
+    a4_2="blue"
+elif a==18:
+    a4_3="blue"
+elif a==19:
+    a4_4="blue"
+elif a==20:
+    a4_5="blue"
+elif a==21:
+    a5_1="blue"
+elif a==22:
+    a5_2="blue"
+elif a==23:
+    a5_3="blue"
+elif a==24:
+    a5_4="blue"
+elif a==25:
+    a5_5="blue"
+
+
+def square():
+    pendown()
+    begin_fill()
+    for i in range(4):
+        forward(50)
+        left(90)
+    end_fill()
+    penup()
+    
+def fxn(x,y):
+    if(x<125 and y<125 and x>-125 and y>-125 and x!=25 and y!=25 and x!=75 and y!=75):
+        ###COLUMN 3
+        #tile 3,3
+        if(y>-25 and y<25 and x>-25 and x<25):
+            fillcolor(a3_3)
+            goto(-25,-25)
+            square()
+
+        #tile 3,4
+        elif(y>25 and y<75 and x<25 and x>-25):
+            fillcolor(a3_4)
+            goto(-25,25)
+            square()
+            
+        #tile 3,2
+        elif(y>-75 and y<-25 and x<25 and x>-25):
+            fillcolor(a3_2)
+            goto(-25,-75)
+            square()
+            
+        #tile 3,1
+        elif(y>75 and y<125 and x<25 and x>-25):
+            fillcolor(a3_1)
+            goto(-25,75)
+            square()
+            
+        #tile 3,5
+        elif(y>-125 and y<-75 and x<25 and x>-25):
+            fillcolor(a3_5)
+            goto(-25,-125)
+            square()
+        
+        ###COLUMN 1
+        #tile 1,3
+        elif(y>-25 and y<25 and x>-125 and x<-75):
+            fillcolor(a1_3)
+            goto(-125,-25)
+            square()
+        
+        #tile 1,4
+        elif(y>25 and y<75 and x>-125 and x<-75):
+            fillcolor(a1_4)
+            goto(-125,25)
+            square()
+        
+        #tile 1,2
+        elif(y>-75 and y<-25 and x>-125 and x<-75):
+            fillcolor(a1_2)
+            goto(-125,-75)
+            square()
+        
+        #tile 1,5
+        elif(y>75 and y<125 and x>-125 and x<-75):
+            fillcolor(a1_5)
+            goto(-125,75)
+            square()
+        
+        #tile 1,1
+        elif(y>-125 and y<-75 and x>-125 and x<-75):
+            fillcolor(a1_1)
+            goto(-125,-125)
+            square()
+        
+        ###COLUMN 2
+        #tile 2,3
+        elif(y>-25 and y<25 and x>-75 and x<-25):
+            fillcolor(a2_3)
+            goto(-75,-25)
+            square()
+        
+        #tile 2,4
+        elif(y>25 and y<75 and x>-75 and x<-25):
+            fillcolor(a2_4)
+            goto(-75,25)
+            square()
+        
+        #tile 2,2
+        elif(y>-75 and y<-25 and x>-75 and x<-25):
+            fillcolor(a2_2)
+            goto(-75,-75)
+            square()
+        
+        #tile 2,5
+        elif(y>75 and y<125 and x>-75 and x<-25):
+            fillcolor(a2_5)
+            goto(-75,75)
+            square()
+        
+        #tile 2,1
+        elif(y>-125 and y<-75 and x>-75 and x<-25):
+            fillcolor(a2_1)
+            goto(-75,-125)
+            square()
+        
+        ###COLUMN 4
+        #tile 4,3
+        elif(y>-25 and y<25 and x>25 and x<75):
+            fillcolor(a4_3)
+            goto(25,-25)
+            square()
+        
+        #tile 4,4
+        elif(y>25 and y<75 and x>25 and x<75):
+            fillcolor(a4_4)
+            goto(25,25)
+            square()
+        
+        #tile 4,2
+        elif(y>-75 and y<-25 and x>25 and x<75):
+            fillcolor(a4_2)
+            goto(25,-75)
+            square()
+        
+        #tile 4,5
+        elif(y>75 and y<125 and x>25 and x<75):
+            fillcolor(a4_5)
+            goto(25,75)
+            square()
+        
+        #tile 4,1
+        elif(y>-125 and y<-75 and x>25 and x<75):
+            fillcolor(a4_1)
+            goto(25,-125)
+            square()
+        
+        ###COLUMN 5
+        #tile 5,3
+        elif(y>-25 and y<25 and x>75 and x<125):
+            fillcolor(a5_3)
+            goto(75,-25)
+            square()
+        
+        #tile 5,4
+        elif(y>25 and y<75 and x>75 and x<125):
+            fillcolor(a5_4)
+            goto(75,25)
+            square()
+        
+        #tile 5,2
+        elif(y>-75 and y<-25 and x>75 and x<125):
+            fillcolor(a5_2)
+            goto(75,-75)
+            square()
+        
+        #tile 5,5
+        elif(y>75 and y<125 and x>75 and x<125):
+            fillcolor(a5_5)
+            goto(75,75)
+            square()
+        
+        #tile 5,1
+        elif(y>-125 and y<-75 and x>75 and x<125):
+            fillcolor(a5_1)
+            goto(75,-125)
+            square()
+        
+        else:
+            goto(x,y)
+            
+wn = turtle.Screen()
+wn.onclick(fxn)
+wn.mainloop()
