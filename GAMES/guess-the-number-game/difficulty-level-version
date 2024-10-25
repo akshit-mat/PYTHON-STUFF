@@ -1,0 +1,39 @@
+#GUESS THE NUMBER GAME WITH DIFFICULTY LEVEL
+
+print("heyy let's play!!")
+print("easy(1 to 10): 1 \nmedium(1 to 100): 2 \nhard(1 to 500): 3")
+b=int(input("choose difficulty... "))
+c=0
+a="lol"
+if b==1:
+    import random
+    x=random.randint(1,10)
+    a="yes"
+elif b==2:
+    import random
+    x=random.randint(1,100)
+    a="yes"
+elif b==3:
+    import random
+    x=random.randint(1,500)
+    a="yes"
+else:
+    print("invalid 😐")
+
+while(a=="yes" or a=="yea" or a=="y" or a=="yep"):
+
+    s=int(input("your guess... "))
+    if(s==x):
+        print("woah! that was the correct number 🤩")
+        a="stop"
+    elif(s>x):
+        print("the number is smaller than that")
+        c+=1
+        a="yes"
+    elif(s<x):
+        print("the number is greater than that")
+        c+=1
+        a="yes"
+
+if(a=="stop"):
+    print("\nyou've guessed the correct number in ", c+1 ,"tries")
