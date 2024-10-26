@@ -1,0 +1,84 @@
+def encode():
+    d1={' ':0,'A':1,'B':2,'C':3,'D':4,'E':5,'F':6,'G':7,'H':8,'I':9,'J':10,'K':11,'L':12,'M':13,'N':14,'O':15,'P':16,'Q':17,'R':18,'S':19,'T':20,'U':21,'V':22,'W':23,'X':24,'Y':25,'Z':26}
+    l=[' ','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+    d2={" ":" ",'W':1,'V':2,'U':3,'T':4,'S':5,'R':6,'Q':7,'P':8,'O':9,'N':10,'M':11,'L':12,'K':13,'J':14,'I':15,'H':16,'G':17,'F':18,'E':19,'D':20,'C':21,'B':22,'A':23,'Z':24,'Y':25,'X':26}
+
+    a=input("enter the message: ")
+    a=a.upper()
+    n=(d1.get(a[0]))
+    n=n
+
+    print("-",end="")
+    print(d1.get(a[0]),end="")
+
+    for j in range(1,len(a)):
+        print("-",end='')
+        if(a[j]==" "):
+            print(" ")
+
+        elif(j%2==1):
+            i=l.index(a[j])
+            if i>n:
+                print(l[i-n],end="")
+            else:
+                print(l[26-(n-i)],end="")
+            print("",end="")
+
+        elif(j%2==0):
+            print(d2.get(a[j]),end="")
+    print("-",end="")
+
+def decode():
+    d1={' ':0,'A':1,'B':2,'C':3,'D':4,'E':5,'F':6,'G':7,'H':8,'I':9,'J':10,'K':11,'L':12,'M':13,'N':14,'O':15,'P':16,'Q':17,'R':18,'S':19,'T':20,'U':21,'V':22,'W':23,'X':24,'Y':25,'Z':26}
+    l=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+    d2={" ":" ",'W':1,'V':2,'U':3,'T':4,'S':5,'R':6,'Q':7,'P':8,'O':9,'N':10,'M':11,'L':12,'K':13,'J':14,'I':15,'H':16,'G':17,'F':18,'E':19,'D':20,'C':21,'B':22,'A':23,'Z':24,'Y':25,'X':26}
+    l2=[0,'W','V','U','T','S','R','Q','P','O','N','M','L','K','J','I','H','G','F','E','D','C','B','A','Z','Y','X']
+
+    a=input("enter the message: ")
+    a=a.upper()
+    ab=a.split("-")
+    an=int(ab[1])
+    if an>9:
+        o=3
+    else:
+        o=2
+    for i in d1.keys():
+        if int(d1.get(i))==int(an):
+            n=i
+    n1=int(an)
+    print(n,end="")
+    b=a[o:].split(" ")
+    for i in b:
+        c=i.split("-")
+        c.remove("")
+        for j in range(0,len(c)):
+            if c[j]=="" or c[j]==" ":
+                print(" ",end="")
+
+            elif c[j].isnumeric()==0:
+                f=l.index(c[j])
+                if f+n1<26:
+                    print(l[f+n1],end="")
+                else:
+                    print(l[(f+n1)-26],end="")
+            elif c[j].isnumeric()==1:
+                print(l2[int(c[j])],end='')
+while True:
+    ans=int(input("\ntype 1 if you want to encode message\ntype 2 if you want to decode message\ntype 3 if you want to exit\nyour response: "))
+    if ans==1:
+        try:
+            encode()
+            print("\n")
+        except:
+            print("\nerror with the given message")
+    elif ans==2:
+        try:
+            decode()
+            print("\n")
+        except:
+            print("\nerror with the given message")
+    elif ans==3:
+        print("\nbye-bye 🤫🧏‍♂️")
+        break
+    else:
+        continue
