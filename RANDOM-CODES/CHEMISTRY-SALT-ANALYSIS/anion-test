@@ -1,0 +1,152 @@
+# anion test :)
+import random
+import sys
+a=random.randint(1,11)
+if a==1:
+    anion="co32-"
+elif a==2:
+    anion='no2-'
+elif a==3:
+    anion='so32-'
+elif a==4:
+    anion='s2-'
+elif a==5:
+    anion='cl-'
+elif a==6:
+    anion='br-'
+elif a==7:
+    anion='i-'
+elif a==8:
+    anion='ch3coo-'
+elif a==9:
+    anion='no3-'
+elif a==10:
+    anion='so42-'
+elif a==11:
+    anion='po43-'
+
+def guess():
+    x=input("enter your guess: ")
+    if x==anion:
+        print("\nawesome bro you actually did it!")
+        sys.exit()
+    else:
+        print("uh-oh maybe you should've been completely sure")
+        return
+
+def loop():
+    while True:
+        z=input("do you wanna add something to this current thingy that you have: (y/n) ")
+        if z=="y":
+            abc=input("enter what you wanna add: ")
+            print("looks like nothing happened")
+        else:
+            print("oki")
+            break
+    
+def tests():
+    x=input("type what you want to add to the salt in your test tube: ")
+    if x=="dil h2so4":
+        if a==1:
+            print("looks like you got some brisk effervescense (or whatever is the spelling)")
+            loop()
+        if a==2:
+            print("what is this... you got brown gas leaking from the test tube")
+            loop()
+        if a==3:
+            print("eww this is giving off some pungent odour")
+            loop()
+        if a==4:
+            print("holy shit it seems like im in a sewer or something its the smell of rotten eggs")
+            loop()
+        else:
+            print("umm nothing happened i suppose")
+            loop()
+    elif x=="conc h2so4":
+        if a==5:
+            print("there seems a colourless gas emerging from this test tube")
+            loop()
+        elif a==6:
+            print("its brown gas coming out of the test tube i see")
+            loop()
+        elif a==7:
+            print("woah a violet coloured gas")
+            loop()
+        elif a==8:
+            print("this smells like vinegar")
+            loop()
+        else:
+            print("sed... nothing happened ;-;")
+            loop()
+    elif(x=="feso4"):
+        print('nothing happened yet')
+        if a==9:    
+            y=input("do you wanna add anything else: (y/n) ")
+            if y=="y":
+                b=input("enter what you wanna add to your test tube containing salt and feso4: ")
+                if b=="conc hno3":
+                    print("damn... it looks like there's a brown ring forming at the junction")
+                    loop()
+                else:
+                    print("umm nothing happened ;-;")
+                    loop()
+            else:
+                print("oh okay i suppose")
+        else:
+            loop()
+    elif(x=="water"):
+        print("wow the salt completely dissolved in the test tube")
+        print("now what are you going to do with it")
+        b=input('enter what you want to add to your original solution: ')
+        if b=="bacl2":
+            if a==10:
+                print("some white ppt is forming at the bottom")
+            
+                y=input("do you wanna add anything else: (y/n) ")
+                if y=="y":
+                    c=input("enter what you wanna add: ")
+                    if c=="dil hcl":
+                        print("it made no difference")
+                        loop()
+                    else:
+                        print("nothing happened")
+                        loop()
+                else:
+                    print("oh okay i suppose")
+            else:
+                print("nothing happened sed")
+                loop()
+        elif b=="conc hno3":
+            print("nothing happened")
+            if a==11:    
+                y=input("do you wanna add anything else: (y/n) ")
+                if y=="y":
+                    c=input("enter what you wanna add: ")
+                    if c=="ammonium molybdate":
+                        print("it suddenly turned yellow")
+                        loop()
+                    else:
+                        print("nothing happened sad")
+                        loop()
+                else:
+                    print("oh okay i guess")
+            else:
+                loop()
+        else:
+            print("nothing happened")
+    elif(x=="uranium"):
+        print("where the hell did you get this from... holy shittt\nim scared of you im going now *proceeds to calls 911*")
+        sys.exit()
+    else:
+        print("that stuff is unavailable in this lab... sad :(")
+
+while True:
+    hi=int(input("click 1 if you wanna run tests\nclick 2 if guess is what you wanna do\nclick 3 if you wanna go free\n"))
+    if hi==1:
+        tests()
+    elif hi==2:
+        guess()
+    else:
+        print("you failed this test as you gave up.")
+        print("it was just", anion)
+        sys.exit()
