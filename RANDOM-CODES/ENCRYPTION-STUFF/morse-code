@@ -1,0 +1,46 @@
+alp=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9']
+morse=['.-','-...','-.-.','-..','.','..-.','--.','....','..','.---','-.-','.-..','--','-.','---','.--.','--.-','.-.','...','-','..-','...-','.--','-..-','-.--','--..','-----','.----','..---','...--','....-','.....','-....','--...','---..','----.']
+l=['0','1','2','3','4','5','6','7','8','9']
+d={}
+for i in range(36):
+    d[alp[i]]=morse[i]
+d1={}
+for i in range(36):
+    d1[morse[i]]=alp[i]
+
+def encode():
+    a=input("enter the message: ")
+    b=a.split()
+    for i in b:
+        for j in i:
+            print(d[j],end=" ")
+        print("/ ",end="")
+
+def decode():
+    a=input("enter the message: ")
+    b=a.split(" / ")
+    for i in b:
+        c=i.split()
+        for j in c:
+            print(d1[j],end="")
+        print(" ",end="")
+
+while True:
+    x=int(input("type 1 to use the encoder\ntype 2 to use the decoder\ntype 3 to exit\nyour response: "))
+    if x==1:
+        try:
+            encode()
+            print("\n")
+        except:
+            print("error occured\n")
+    elif x==2:
+        try:
+            decode()
+            print("\n")
+        except:
+            print("error occured\n")
+    elif x==3:
+        break
+    else:
+        continue
+print("\nbyeeeeeeee :D")
