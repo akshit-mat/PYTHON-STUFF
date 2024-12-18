@@ -18,7 +18,7 @@ this is one of the more refined games i've made where it records the score in My
 ### - for PvE with scoreboard
 - python>=3.10
 - MySQL>=8.0.31
-- pip install pymysql
+- `pip install pymysql`
 - No external library for random module
 
  NOTE: This is kind of an embarrassing incomplete part of this project... you need to pre-requisitely make a database in MySQL named "rps_scoreboard" with coloumns name (char), w (int), l (int), d (int) and total (int)
