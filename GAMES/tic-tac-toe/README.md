@@ -14,7 +14,9 @@ this is a PvE game based on random module... (so there's a high chance of win...
 ### - Player vs Environment (IMPOSSIBLE) 😈
 this however... is BRUTE FORCE.
 
-about this, i just picked up a notebook and decided to write every possible outcome of a tic tac toe match (the pic of the page is attached) and then i coded all possible outcomes and turns into if else statements (yes this is the inefficient part)
+about this, i just picked up a notebook and decided to write every possible outcome of a tic tac toe match (the pic of the page is attached) and then i coded all possible outcomes and turns into if else statements (yes this is the inefficient part). 
+<br/>
+anyways its impossible to beat (there's only two possible outcomes: either the computer wins or its a draw)
 
 to summarize this... the computer just plays exactly like how i would play in a 1v1 match of tic-tac-toe
 
