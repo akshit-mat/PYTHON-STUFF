@@ -1,4 +1,4 @@
-# THE GAME OF TIC-TAC-TOE 🤜🧻✂
+# ❌ THE GAME OF TIC-TAC-TOE ⭕
 this game is kind of close to me (not in a sexual way)...
 this is legit the purest form of BRUTE FORCE coding, to sum up this code... this is just a bunch of if elif statements disguised as a game.
 
@@ -32,3 +32,4 @@ to summarize this... the computer just plays exactly like how i would play in a 
 - python>=3.10
 - No external library for sys module
 
+P.S. this is a very NON-user-friendly code if you write something wrong it just ends the program lol (irony is... the only module i've imported is to make the code non user friendly)
