@@ -39,3 +39,23 @@ This project simulates the traditional chemistry lab practical of salt analysis,
 - Random module (built-in)
 - sys module (built-in)
 
+## 📚 Educational Value
+
+This simulator helps students:
+- Practice salt analysis in a safe, virtual environment
+- Learn the systematic approach to qualitative analysis
+- Understand chemical reactions and their observations
+- Prepare for actual laboratory practicals from homes
+
+## 🚀 Future Improvements
+
+- Add confirmatory reactions... currently this program only has preliminary analysis for anion determination
+- Include cation testing simulation
+- Add visual representations of reactions
+- Implement a scoring system
+- Add detailed explanations of chemical reactions
+- Include solubility rules and chemical equations
+
+## 👨‍🔬 Author
+
+Created as a 12th-grader to practice salt analysis from home (as I hadn't attended enough chemistry practical classes)
