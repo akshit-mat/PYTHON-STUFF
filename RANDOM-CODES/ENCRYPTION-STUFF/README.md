@@ -1,15 +1,15 @@
-# ENCRYPTION
-This is just some code i wrote while i was learning morse code and other types of encryptions
+# 🛡️ ENCRYPTIONs 🔐
+This is just some code i wrote while i was learning morse code and other type of encryptions
 
-## There are two programs in this Repository
-### - MORSE CODE
+## 🔍 There are two programs in this Repository
+### - MORSE CODE 🔑
 This is a simple morse code encoder and decoder
 This is the format for encoding: (separate alphabets by space and words by /)
 ```
 - .... .. ... / .. ... / .- / ... .- -- .--. .-.. .
 ```
 
-### - MY ENCRYPTION
+### - MY ENCRYPTION 🌐
 This is an encryption i made for no good enough reason (i was just bored)
 This is the general format for my encoding: (separate alphabets by - with a - in the beginning and separate alphabets by space)
 ```
@@ -19,5 +19,5 @@ This is the general format for my encoding: (separate alphabets by - with a - in
 -5-G-11-V-12-K-
 ```
 
-## Requirements
+## 🔧 Requirements
 - Python 3.x
